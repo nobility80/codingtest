@@ -253,6 +253,31 @@ int hyodo_together() {
 //     printf("%d",ans);
 // }
 
+//https://softeer.ai/practice/7706
+struct StNode {
+    int start = 0;
+    int end = 0;
+    char ch;
+};
+
+int hyodotravel() {
+    int depthN;
+    int lengthM;
+    string strM;
+
+    scanf("%d%d", &depthN, &lengthM);
+    scanf("%s", strM);
+
+    StNode pstnode[depthN-1];
+
+    for (int i=0; i<depthN-1; i++) {
+        scanf("%d%d%c", &pstnode[i].start ,&pstnode[i].end, &pstnode[i].ch);
+        scanf("%d%d%c", &pstnode[i].start ,&pstnode[i].end, &pstnode[i].ch);
+    }
+
+    return 1;
+}
+
 // https://softeer.ai/practice/6294
 #define _CRT_SECURE_NO_WARNINGS
 struct section {
@@ -289,7 +314,10 @@ int main(int argc, char** argv) {
     // free(strScore);
 
     //spiral numbering [2024.02.19]
-    int ans = hyodo_together();
+    // int ans = hyodo_together();
+
+    //https://softeer.ai/practice/7726 [2024.02.23]
+    int ans = hyodotravel();
 
     return 0;
 }
